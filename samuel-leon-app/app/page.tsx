@@ -8,7 +8,7 @@ import './globals.css';
 
 export default function Home() {
   return (
-    <main className="min-w-80 flex min-h-screen flex-col items-center justify-between pt-20 px-0">
+    <main className="min-w-80 flex min-h-screen flex-col items-center justify-between px-0">
       <LandingVideo />
       <BurgerButton />
       <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"></link>
