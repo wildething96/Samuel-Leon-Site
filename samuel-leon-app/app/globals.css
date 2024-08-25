@@ -1,9 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,31 +13,28 @@
   --fg: rgb(31, 29, 29);
   --bg: rgb(243, 240, 240);
   --bg-secondary: rgb(223, 220, 220);
-  --white:  rgb(221, 203, 203);
-  --black:  rgb(31, 29, 29);
-  --grey:  rgb(66, 64, 64);
-  --red:  rgb(172, 37, 37);
+  --white: rgb(221, 203, 203);
+  --black: rgb(31, 29, 29);
+  --grey: rgb(66, 64, 64);
+  --red: rgb(172, 37, 37);
   /* --white:  rgb(221, 203, 203);
   --white:  rgb(221, 203, 203);
   --white:  rgb(221, 203, 203);
   --white:  rgb(221, 203, 203); */
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: rgb(255, 255, 255);
-    --background-start-rgb: rgb(8, 8, 8);
-    --background-end-rgb: rgb(36, 35, 35);
+    --fg: rgb(255, 255, 255);
+    --bg: rgb(8, 8, 8);
+    --bg-secondary: rgb(36, 35, 35);
   }
-} */
+}
 
 body {
   color: var(--fg);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--bg-secondary))
-      var(--bg);
+  background: linear-gradient(to bottom, transparent, var(--bg-secondary))
+    var(--bg);
 }
 
 @layer utilities {
@@ -51,8 +48,8 @@ h1 {
 }
 
 .menu-option {
-  color:var(--white);
-  margin: 0,0,0,4;
+  color: var(--white);
+  margin: 0, 0, 0, 4;
   cursor: pointer;
 }
 
@@ -62,16 +59,17 @@ h1 {
 }
 
 .menu-items:hover {
-  filter:brightness(130%);
+  filter: brightness(130%);
   transition: 0.3s filter linear;
 }
 
-.menu-items:hover .menu-item{
+.menu-items:hover .menu-item {
   color: var(--black); /* Change to a different color on hover */
 }
 
 .ten h1 {
-  font-size:4.2rem; font-weight:500;
+  font-size: 4.2rem;
+  font-weight: 500;
   font-family: "Great Vibes", cursive;
   font-weight: 600;
   font-style: normal;
@@ -93,17 +91,16 @@ h1 {
 
 } */
 
-.ten h1:after{
-    background-color: #c50000;
-    border-radius: 0.25rem;
-    content: '';
-    display: block;
-    height: 0.25rem;
-    width: 70px;
-    margin-bottom: 0.5rem;
-    margin-left: auto;
+.ten h1:after {
+  background-color: #c50000;
+  border-radius: 0.25rem;
+  content: "";
+  display: block;
+  height: 0.25rem;
+  width: 70px;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
 }
-
 
 @keyframes textColorFade {
   0% {
@@ -115,10 +112,16 @@ h1 {
 }
 
 .fade-text {
-  font-size: em; /* Adjust size as needed */
-  background: linear-gradient(to right, #000 30%, rgb(126, 125, 125) 50%, #000 100%);
+  font-size: 1em; /* Adjust size as needed */
+  background: linear-gradient(
+    to right,
+    #000 30%,
+    rgb(126, 125, 125) 50%,
+    #000 100%
+  );
   -webkit-background-clip: text;
+  background-clip: text; /* Standard property for compatibility */
   color: transparent; /* Make text color transparent to show gradient */
   background-size: 25% 10%; /* Double the width for animation */
-  animation: textColorFade 12s; /* Animation duration and loop */
+  animation: textColorFade 12s infinite; /* Animation duration and loop */
 }
